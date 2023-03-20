@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google ADS</title>
+  </head>
+  <body>
+    <button id="facebook-btn" style="z-index: 1">Facebook</button>
+    <iframe
+      id="iframe1"
+      width="1890"
+      height="1920"
+      src="https://lookerstudio.google.com/embed/reporting/09c77d84-923b-4a33-989c-db780411d796/page/VgD"
+    ></iframe>
+    <iframe
+      id="iframe2"
+      title="TRAFEGO PAGO"
+      width="1890"
+      height="1920"
+      src="https://app.powerbi.com/view?r=eyJrIjoiNjJlYTI5YmMtZDVhNy00YzY1LWFiZDgtYmQzODQ0NTRjMjRmIiwidCI6IjFiZGQzYWUxLTRiYjgtNDRjYS04MmIzLTgzMzlmYWVjODFlZSJ9"
+      frameborder="0"
+      style="display: none"
+    ></iframe>
+    <script>
+      const facebookBtn = document.getElementById("facebook-btn");
+      const iframe1 = document.getElementById("iframe1");
+      const iframe2 = document.getElementById("iframe2");
+      let isIframe1Visible = true;
+
+      facebookBtn.addEventListener("click", () => {
+        if (isIframe1Visible) {
+          iframe1.style.display = "none";
+          iframe2.style.display = "block";
+          isIframe1Visible = false;
+        } else {
+          iframe2.style.display = "none";
+          iframe1.style.display = "block";
+          isIframe1Visible = true;
+        }
+      });
+    </script>
+  </body>
+</html>
